@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Database</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 80%;
+            margin: 20px auto;
+        }
+
+        table,
+        th,
+        td {
+            border: 2px solid #000;
+            padding: 10px;
+            text-align: center;
+        }
+
+        caption {
+            font-size: 1.5em;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        small {
+            display: block;
+            margin-top: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <table title="Movie Database Table">
+        <caption>Top Movies Database</caption>
+        <tr>
+            <th>Movie Name</th>
+            <th>Genre</th>
+            <th>Year</th>
+            <th>IMDB Rating</th>
+            <th>Link</th>
+        </tr>
+        <tr>
+            <td>The Shawshank Redemption</td>
+            <td>Drama</td>
+            <td>1994</td>
+            <td>9.3</td>
+            <td><a href="https://www.imdb.com/title/tt0111161/" target="_blank">IMDB</a></td>
+        </tr>
+        <tr>
+            <td>The Dark Knight</td>
+            <td>Action</td>
+            <td>2008</td>
+            <td>9.0</td>
+            <td><a href="https://www.imdb.com/title/tt0468569/" target="_blank">IMDB</a></td>
+        </tr>
+        <tr>
+            <td>Inception</td>
+            <td>Sci-Fi</td>
+            <td>2010</td>
+            <td>8.8</td>
+            <td><a href="https://www.imdb.com/title/tt1375666/" target="_blank">IMDB</a></td>
+        </tr>
+        <tr>
+            <td colspan="5" style="text-align:center; font-weight:bold;">More movies coming soon...</td>
+        </tr>
+    </table>
+
+    <small>Note: IMDB ratings are as per the latest data available online.</small>
+
+</body>
+
+</html>
