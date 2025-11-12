@@ -1,52 +1,16 @@
 # Frontend-Dev
-Module 1: Introduction to Web Development
-Date: Oct 9
-Instructor: Deepak Prasad
-Learned about the basics of the web, how web pages work, and the role of HTML, CSS, and JavaScript.
-Assignment: Replicate the provided model question paper layout using HTML.
 
-Module 2: HTML Basics
-Date: Oct 9
-Instructor: Sahil Kumar
-Topics:
-Structure of an HTML document
-Common tags (<html>, <head>, <body>, <p>, <h1>–<h6>, <a>, <img>, etc.)
-Assignment: Submission of HTML Basics
+Web Development Progress
 
-Module 3: Intro to HTML & Elements
-Date: Oct 9
-Instructor: Sahil Kumar
-Learned about:
-Block and Inline Elements
-Semantic tags
-Assignment: Submission of Intro to Web Development
+| **Module**                                           | **Date** | **Instructor(s)**                           | **Topics / Learnings**                                                                                                                                                        | **Assignment / Task**                                             | **Practical Tasks / Projects Assigned**                        |
+| ---------------------------------------------------- | -------- | ------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------- | -------------------------------------------------------------- |
+| **Module 1: Introduction to Web Development**        | Oct 9    | Deepak Prasad **Sir**                       | - Basics of the web<br>- How web pages work<br>- Role of HTML, CSS, and JavaScript                                                                                            | Replicate the provided model question paper layout using **HTML** | Basic **HTML Structure Practice**                              |
+| **Module 2: HTML Basics**                            | Oct 9    | Sahil Kumar **Sir**                         | - Structure of an HTML document<br>- Common tags (`<html>`, `<head>`, `<body>`, `<h1>`–`<h6>`, `<p>`, `<a>`, `<img>`, etc.)                                                   | Submission of **HTML Basics**                                     | Create a **Portfolio Page** using HTML                         |
+| **Module 3: Intro to HTML & Elements**               | Oct 9    | Sahil Kumar **Sir**                         | - Block and Inline Elements<br>- Semantic Tags                                                                                                                                | Submission of **Intro to Web Development**                        | Build a **Simple Calculator Layout** using HTML                |
+| **Module 4: HTML Iframes & Layouts**                 | Oct 10   | Sahil Kumar **Sir** / Deepak Prasad **Sir** | - Embedding content using `<iframe>`<br>- Inline and Block behavior                                                                                                           | Submission of **HTML Iframes**                                    | Design a **Zomato Header Layout** using HTML                   |
+| **Module 5: Introduction to CSS**                    | Oct 13   | Deepak Prasad **Sir**                       | - Syntax and Types of CSS (Inline, Internal, External)<br>- Selectors, Colors, Backgrounds<br>- Box Model, CSS Units, Margin, Padding, and Positioning                        | Create a webpage using **Internal and External CSS**              | Apply CSS styling to **Portfolio Page**                        |
+| **Module 6: CSS Flexbox, Grid, and Transformations** | Oct 16   | Sahil Kumar **Sir**                         | - Flexbox Layout System<br>- Grid Layout System<br>- CSS Transforms and Transitions<br>📂 Resources: `CSS_Grid_Properties.pdf`, `Flexbox_Properties.pdf`                      | Submission of **CSS Flexbox and Grid Project**                    | **Flexbox & Grid Practices** (cards, navbar, gallery)          |
+| **Module 7: Responsive Design & Media Queries**      | Oct 18   | Deepak Prasad **Sir**                       | - Concept of Responsive Design<br>- Viewport and Breakpoints<br>- Applying Media Queries for different devices<br>- Making layouts mobile-friendly                            | Task: Make a responsive webpage using **Media Queries**           | **Responsiveness Practice** on Portfolio / Zomato Pages        |
+| **Module 8: Introduction to Bootstrap**              | Oct 25   | Sahil Kumar **Sir**                         | - Bootstrap Framework Overview<br>- Containers, Rows, and Columns (Grid System)<br>- Responsive Utilities, Components, and Navbar<br>- Buttons, Cards, and Forms in Bootstrap | Create a **Responsive Landing Page** using **Bootstrap 5**        | **Bootstrap Practice Projects** (Navbar, Cards, Footer Design) |
 
-Module 4: HTML Iframes & Layouts
-Date: Oct 10
-Instructor: Sahil Kumar / Deepak Prasad
-Topics:
-Embedding content using <iframe>
-Inline and block behavior
-Assignment: Submission of HTML Iframes
-
-Module 5: Introduction to CSS
-Date: Oct 13
-Instructor: Deepak Prasad
-Topics:
-Syntax and Types of CSS (Inline, Internal, External)
-Selectors, Colors, Backgrounds
-Box Model, CSS Units, Margin, Padding, and Positioning
-Task: Create a webpage using internal and external CSS.
-
-Module 6: CSS Flexbox, Grid, and Transformations
-Date: Oct 16
-Instructor: Sahil Kumar
-Topics:
-Flexbox Layout System
-Grid Layout System
-CSS Transforms and Transitions
-Resources:
-CSS_Grid_Properties.pdf
-Flexbox_Properties.pdf
-Assignment: Submission of CSS Flexbox and Grid project
 
