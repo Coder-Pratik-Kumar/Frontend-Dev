@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Product Highlight</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="code2.js"></script>
+
+    <style>
+        body { font-family: Arial; padding: 20px; }
+
+        .product {
+            border: 1px solid #ccc;
+            padding: 15px;
+            margin: 10px;
+            width: 200px;
+            display: inline-block;
+            vertical-align: top;
+            position: relative;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+
+        .product:hover .details { display: block; }
+
+        .details {
+            display: none;
+            font-size: 14px;
+            color: gray;
+            margin-top: 10px;
+        }
+
+        .highlight {
+            background-color: #ffe6b3;
+        }
+
+        .favorite {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        .selected {
+            color: red;
+        }
+
+        .product[data-discount="true"] {
+            border: 2px solid green;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Our Products</h1>
+</header>
+
+<main>
+
+    <section id="productList">
+
+        <div class="product" data-stock="in" data-discount="true">
+            <h3>Smartphone</h3>
+            <p>Price: ₹15,000</p>
+            <div class="details">Camera: 48MP, Battery: 5000mAh</div>
+        </div>
+
+        <div class="product" data-stock="out">
+            <h3>Headphones</h3>
+            <p>Price: ₹1,200</p>
+            <div class="details">Noise cancellation enabled</div>
+        </div>
+
+        <div class="product" data-stock="in" data-discount="true">
+            <h3>Smartwatch</h3>
+            <p>Price: ₹2,800</p>
+            <div class="details">Heart rate monitor, Waterproof</div>
+        </div>
+
+        <div class="product" data-stock="in">
+            <h3>Bluetooth Speaker</h3>
+            <p>Price: ₹899</p>
+            <div class="details">Deep bass, 10hrs battery</div>
+        </div>
+
+        <div class="product" data-stock="out">
+            <h3>Keyboard</h3>
+            <p>Price: ₹500</p>
+            <div class="details">Mechanical keys</div>
+        </div>
+
+    </section>
+
+</main>
+
+<footer>
+    <p>© 2025 E-commerce Store</p>
+</footer>
+
+</body>
+</html>

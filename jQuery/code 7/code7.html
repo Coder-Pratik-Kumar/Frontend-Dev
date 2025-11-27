@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Courses</title>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <style>
+        body {
+            font-family: Arial;
+            padding: 20px;
+        }
+
+        #search {
+            padding: 8px;
+            width: 250px;
+            margin-bottom: 15px;
+        }
+
+        .course {
+            padding: 10px;
+            background: #f2f2f2;
+            margin: 8px 0;
+            border-radius: 5px;
+        }
+
+        .highlight {
+            background: yellow;
+        }
+
+        #count {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        #clear {
+            padding: 8px 12px;
+            margin-left: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Search Courses</h2>
+
+<input type="text" id="search" placeholder="Search courses...">
+<button id="clear">Clear</button>
+
+<div id="courseList">
+    <div class="course">JavaScript for Beginners</div>
+    <div class="course">Advanced CSS Techniques</div>
+    <div class="course">Full-Stack Development</div>
+    <div class="course">Data Structures in Java</div>
+    <div class="course">Python for Machine Learning</div>
+</div>
+
+<p id="count"></p>
+
+<script src="code7.js"></script>
+
+</body>
+</html>

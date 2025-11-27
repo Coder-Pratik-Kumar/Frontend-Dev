@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Blog Posts</title>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <style>
+        body { font-family: Arial; padding: 20px; }
+        .post { background: #f0f0f0; padding: 10px; margin: 10px 0; border-radius: 5px; }
+        .highlight { background: yellow !important; }
+        button { padding: 6px 12px; margin-right: 5px; }
+        #keyword { padding: 6px; width: 200px; }
+        .tag { display: inline-block; background: #d1e7ff; padding: 3px 6px; margin-right: 5px; border-radius: 3px; }
+    </style>
+</head>
+<body>
+
+<h2>Dynamic Blog Posts</h2>
+
+<button id="addPost">Add New Post</button>
+<button id="prependPost">Prepend Featured Post</button>
+<button id="removeLast">Remove Last Post</button>
+
+<br><br>
+
+<input type="text" id="keyword" placeholder="Highlight keyword...">
+
+<div id="posts">
+    <div class="post">
+        <div class="tag">Tech</div>
+        Learning JavaScript Basics
+    </div>
+
+    <div class="post">
+        <div class="tag">Web</div>
+        Building Websites with HTML & CSS
+    </div>
+</div>
+
+<script src="code8.js"></script>
+
+</body>
+</html>

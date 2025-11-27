@@ -1,0 +1,30 @@
+body {
+    font-family: Arial;
+    padding: 20px;
+}
+
+.faq {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #aaa;
+}
+
+.question {
+    font-size: 18px;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.question:hover {
+    color: blue;
+}
+
+.answer {
+    display: none;
+    margin-top: 5px;
+    padding-left: 10px;
+}
+
+.highlight {
+    background-color: #ffffcc;
+}

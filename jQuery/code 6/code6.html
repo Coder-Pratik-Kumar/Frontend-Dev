@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Subscription Panel</title>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <style>
+        body { font-family: Arial; padding: 20px; }
+        .topic { padding: 8px; margin: 5px 0; background: #e2e2e2; cursor: pointer; width: 250px; }
+        #message { margin-top: 15px; font-weight: bold; }
+        button { margin-right: 5px; padding: 6px 12px; }
+    </style>
+</head>
+<body>
+
+<h2>Event Subscription Panel</h2>
+
+<div id="topics">
+    <div class="topic" data-name="Sports">Sports</div>
+    <div class="topic" data-name="Technology">Technology</div>
+</div>
+
+<input type="text" id="newTopic" placeholder="Add new topic">
+<button id="addTopicBtn">Add Topic</button>
+
+<br><br>
+
+<button id="subscribeBtn">Subscribe</button>
+<button id="unsubscribeBtn">Unsubscribe</button>
+
+<div id="message"></div>
+
+<script src="code6.js"></script>
+
+</body>
+</html>

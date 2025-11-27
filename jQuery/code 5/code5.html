@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Members Directory</title>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <style>
+        body { font-family: Arial; padding: 20px; }
+        .department, .manager, .employee {
+            padding: 8px;
+            margin: 5px 0;
+            cursor: pointer;
+            width: 300px;
+        }
+        .department { background: #d9edf7; }
+        .manager { background: #f2dede; }
+        .employee { background: #dff0d8; }
+        .highlight { background: yellow !important; }
+        .contact { display: none; margin-left: 20px; font-size: 14px; }
+        .team { margin-left: 20px; }
+    </style>
+</head>
+<body>
+
+<h2>Team Members Directory</h2>
+
+<div class="department" id="dept1">
+    Sales Department
+    <div class="team">
+        <div class="manager">Amit (Manager)</div>
+        <div class="employee">Ravi</div>
+        <div class="contact">Ravi Contact: 999-555</div>
+
+        <div class="employee">Suman</div>
+        <div class="contact">Suman Contact: 888-333</div>
+    </div>
+</div>
+
+<div class="department" id="dept2">
+    Tech Department
+    <div class="team">
+        <div class="manager">Neha (Manager)</div>
+        <div class="employee">Pratik</div>
+        <div class="contact">Pratik Contact: 777-444</div>
+
+        <div class="employee">Kavya</div>
+        <div class="contact">Kavya Contact: 666-222</div>
+    </div>
+</div>
+
+<button id="randomBtn">Highlight Random Employee + Siblings</button>
+<button id="toggleBtn">Collapse / Expand All Teams</button>
+
+<script src="code5.js"></script>
+
+</body>
+</html>
