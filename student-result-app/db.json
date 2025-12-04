@@ -1,7 +1,7 @@
 {
   "students": [
     {
-      "id": 1,
+      "id": "1",
       "name": "Rahul Sharma",
       "section": "A",
       "marks": 85,
@@ -9,15 +9,7 @@
       "email": "rahul@student.com"
     },
     {
-      "id": 2,
-      "name": "Priya Patel",
-      "section": "B",
-      "marks": 92,
-      "grade": "A+",
-      "email": "priya@student.com"
-    },
-    {
-      "id": 3,
+      "id": "3",
       "name": "Amit Kumar",
       "section": "A",
       "marks": 78,
@@ -25,7 +17,7 @@
       "email": "amit@student.com"
     },
     {
-      "id": 4,
+      "id": "4",
       "name": "Sneha Reddy",
       "section": "C",
       "marks": 88,
@@ -33,7 +25,7 @@
       "email": "sneha@student.com"
     },
     {
-      "id": 5,
+      "id": "5",
       "name": "Vikram Singh",
       "section": "B",
       "marks": 65,
@@ -45,7 +37,7 @@
       "section": "K",
       "marks": 99,
       "grade": "A+",
-      "id": 6,
+      "id": "6",
       "email": "brajdeep@student.com"
     },
     {
@@ -53,8 +45,22 @@
       "section": "K",
       "marks": 100,
       "grade": "A+",
-      "id": 7,
+      "id": "7",
       "email": "Nitin.rathor@student.com"
+    },
+    {
+      "name": "Pratik Kumar",
+      "section": "D",
+      "marks": 90,
+      "grade": "A+",
+      "id": "4eef"
+    },
+    {
+      "id": "baa3",
+      "name": "brajdeep",
+      "section": "K",
+      "marks": 85,
+      "grade": "A"
     }
   ],
   "users": [
@@ -62,44 +68,31 @@
       "id": 1,
       "username": "teacher1",
       "password": "teacher123",
-      "name": "Mr. John Smith",
-      "role": "teacher",
-      "email": "john.smith@school.com"
+      "role": "teacher"
     },
     {
-      "id": 2,
-      "username": "teacher2",
-      "password": "teacher123",
-      "name": "Ms. Sarah Johnson",
-      "role": "teacher",
-      "email": "sarah.johnson@school.com"
+      "id": "85da",
+      "username": "czdcd",
+      "password": "12356",
+      "role": "student"
     },
     {
-      "id": 3,
-      "username": "rahul",
-      "password": "student123",
-      "name": "Rahul Sharma",
-      "role": "student",
-      "email": "rahul@student.com",
-      "studentId": 1
+      "id": "5944",
+      "username": "pratik",
+      "password": "pratik123",
+      "role": "teacher"
     },
     {
-      "id": 4,
-      "username": "priya",
-      "password": "student123",
-      "name": "Priya Patel",
-      "role": "student",
-      "email": "priya@student.com",
-      "studentId": 2
+      "id": "3eff",
+      "username": "sumit",
+      "password": "sumit@123",
+      "role": "teacher"
     },
     {
-      "id": 5,
-      "username": "amit",
-      "password": "student123",
-      "name": "Amit Kumar",
-      "role": "student",
-      "email": "amit@student.com",
-      "studentId": 3
+      "id": "630d",
+      "username": "varun",
+      "password": "varun@123",
+      "role": "student"
     }
   ]
 }

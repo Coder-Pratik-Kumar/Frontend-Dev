@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
 import './StudentForm.css';
-
-// Function to auto-calculate grade based on marks
 const calculateGrade = (marks) => {
   const numMarks = parseInt(marks);
   if (isNaN(numMarks)) return '';
@@ -15,24 +13,21 @@ const calculateGrade = (marks) => {
 };
 
 function StudentForm({ student, onSubmit, onCancel, isEditMode }) {
-  // Using useState for form fields
+
   const [name, setName] = useState(student ? student.name : '');
   const [section, setSection] = useState(student ? student.section : '');
   const [marks, setMarks] = useState(student ? student.marks : '');
   const [grade, setGrade] = useState(student ? student.grade : '');
   const [errors, setErrors] = useState({});
 
-  // Handle marks change and auto-calculate grade
   const handleMarksChange = (e) => {
     const newMarks = e.target.value;
     setMarks(newMarks);
-    // Auto-calculate grade when marks change
     if (newMarks !== '') {
       setGrade(calculateGrade(newMarks));
     }
   };
 
-  // Validate form fields
   const validateForm = () => {
     const newErrors = {};
     
@@ -56,12 +51,10 @@ function StudentForm({ student, onSubmit, onCancel, isEditMode }) {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Validate form
     if (!validateForm()) {
       return;
     }
 
-    // Prepare student data
     const studentData = {
       name: name.trim(),
       section: section.trim().toUpperCase(),
@@ -69,7 +62,6 @@ function StudentForm({ student, onSubmit, onCancel, isEditMode }) {
       grade: grade,
     };
 
-    // If editing, include the ID
     if (isEditMode && student) {
       studentData.id = student.id;
     }

@@ -1,38 +1,43 @@
-import React, { useState } from 'react';
-import './LoginForm.css';
+import React, { useState } from "react";
+import "./LoginForm.css";
 
-function LoginForm({ onLogin }) {
-  const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
-  const [role, setRole] = useState('student');
-  const [error, setError] = useState('');
+function LoginForm({ onLogin, onSignupClick }) {
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+  const [role, setRole] = useState("student");
+  const [error, setError] = useState("");
   const [isLoading, setIsLoading] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setError('');
+    setError("");
 
-    // Validation
-    if (!username.trim()) {
-      setError('Please enter username');
-      return;
-    }
-    if (!password.trim()) {
-      setError('Please enter password');
-      return;
-    }
+    if (!username.trim()) return setError("Please enter username");
+    if (!password.trim()) return setError("Please enter password");
 
     setIsLoading(true);
 
     try {
-      // Fetch users from JSON Server
-      const response = await fetch('http://localhost:3001/users');
-      const users = await response.json();
+      const res = await fetch("http://localhost:3002/users");
 
-      // Find matching user
+      // server not running
+      if (!res.ok) {
+        setError("Server connection failed. Please run JSON Server.");
+        setIsLoading(false);
+        return;
+      }
+
+      const users = await res.json();
+
+      if (!Array.isArray(users)) {
+        setError("Invalid server response (users not found).");
+        setIsLoading(false);
+        return;
+      }
+
       const user = users.find(
         (u) =>
-          u.username === username &&
+          u.username?.toLowerCase() === username.toLowerCase() &&
           u.password === password &&
           u.role === role
       );
@@ -40,14 +45,15 @@ function LoginForm({ onLogin }) {
       if (user) {
         onLogin(user);
       } else {
-        setError('Invalid username, password, or role. Please try again.');
+        setError("Invalid username, password, or role.");
       }
+
     } catch (err) {
-      setError('Failed to connect to server. Make sure JSON Server is running.');
-      console.error(err);
-    } finally {
-      setIsLoading(false);
+      console.error("Login error:", err);
+      setError("Cannot connect to server. Make sure JSON Server is running.");
     }
+
+    setIsLoading(false);
   };
 
   return (
@@ -60,83 +66,72 @@ function LoginForm({ onLogin }) {
         </div>
 
         <form onSubmit={handleSubmit} className="login-form">
+
           {/* Role Selection */}
           <div className="role-selector">
             <button
               type="button"
-              className={`role-btn ${role === 'student' ? 'active' : ''}`}
-              onClick={() => setRole('student')}
+              className={`role-btn ${role === "student" ? "active" : ""}`}
+              onClick={() => setRole("student")}
             >
-              <span className="role-icon">👨‍🎓</span>
-              <span>Student</span>
+              👨‍🎓 Student
             </button>
+
             <button
               type="button"
-              className={`role-btn ${role === 'teacher' ? 'active' : ''}`}
-              onClick={() => setRole('teacher')}
+              className={`role-btn ${role === "teacher" ? "active" : ""}`}
+              onClick={() => setRole("teacher")}
             >
-              <span className="role-icon">👨‍🏫</span>
-              <span>Teacher</span>
+              👨‍🏫 Teacher
             </button>
           </div>
 
-          {error && (
-            <div className="error-alert">
-              <span>⚠️</span> {error}
-            </div>
-          )}
+          {error && <div className="error-alert">⚠️ {error}</div>}
 
           <div className="form-group">
-            <label htmlFor="username">
-              <span className="label-icon">👤</span> Username
-            </label>
+            <label>👤 Username</label>
             <input
               type="text"
-              id="username"
               value={username}
               onChange={(e) => setUsername(e.target.value)}
-              placeholder="Enter your username"
-              autoComplete="username"
+              placeholder="Enter username"
             />
           </div>
 
           <div className="form-group">
-            <label htmlFor="password">
-              <span className="label-icon">🔒</span> Password
-            </label>
+            <label>🔒 Password</label>
             <input
               type="password"
-              id="password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              placeholder="Enter your password"
-              autoComplete="current-password"
+              placeholder="Enter password"
             />
           </div>
 
           <button type="submit" className="login-btn" disabled={isLoading}>
-            {isLoading ? (
-              <>
-                <span className="spinner-small"></span> Logging in...
-              </>
-            ) : (
-              <>🚀 Login as {role === 'student' ? 'Student' : 'Teacher'}</>
-            )}
+            {isLoading ? "Logging in..." : `Login as ${role}`}
           </button>
+
+          <p className="switch-auth">
+            Don't have an account?
+            <button type="button" onClick={onSignupClick}>
+              Create Account
+            </button>
+          </p>
         </form>
 
         <div className="demo-credentials">
           <h4>📝 Demo Credentials</h4>
           <div className="credentials-grid">
             <div className="credential-box teacher">
-              <strong>👨‍🏫 Teacher</strong>
-              <p>Username: <code>teacher1</code></p>
-              <p>Password: <code>teacher123</code></p>
+              <strong>Teacher</strong>
+              <p>Username: teacher1</p>
+              <p>Password: teacher123</p>
             </div>
             <div className="credential-box student">
-              <strong>👨‍🎓 Student</strong>
-              <p>Username: <code>rahul</code></p>
-              <p>Password: <code>student123</code></p>
+              <strong>Student</strong>
+              <p>Username: rahul</p>
+              <p>Password: student123</p>
             </div>
           </div>
         </div>
